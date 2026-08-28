@@ -1,0 +1,36 @@
+#!/bin/bash
+# Swap the bar to the glossy Aero clone when the Frutiger Aero theme is set,
+# and hand the stock bar back for every other theme.
+#
+# $1 is the theme name, lowercased with spaces turned into dashes by
+# omarchy-theme-set ("Frutiger Aero" -> "frutiger-aero"). The sample hook
+# calls that "snake-cased"; the code does `tr ' ' '-'`, so it is kebab.
+# Both spellings are accepted below in case that is ever corrected.
+#
+# The gloss itself is theme-reactive -- it tints from Color.accent, so the
+# custom bar looks right under any theme and this hook is a preference, not a
+# requirement. Drop the file to keep the glossy bar everywhere.
+
+set -u
+
+AERO_BAR="genkerensky.bar"
+STOCK_BAR="omarchy.bar"
+SHELL_JSON="$HOME/.config/omarchy/shell.json"
+
+case "${1:-}" in
+  frutiger-aero | frutiger_aero) want="$AERO_BAR" ;;
+  *)                             want="$STOCK_BAR" ;;
+esac
+
+# Never point the bar at a plugin that isn't installed: the shell would load
+# nothing and leave the desktop with no bar at all.
+if [[ $want != "$STOCK_BAR" ]] && ! omarchy plugin list --json 2>/dev/null |
+     jq -e --arg id "$want" 'any(.[]; .id == $id)' >/dev/null; then
+  echo "aero-bar hook: $want is not installed, leaving the bar alone" >&2
+  exit 0
+fi
+
+current=$(jq -r '.bar.id // "omarchy.bar"' "$SHELL_JSON" 2>/dev/null || echo "$STOCK_BAR")
+[[ $current == "$want" ]] && exit 0
+
+omarchy bar use "$want"

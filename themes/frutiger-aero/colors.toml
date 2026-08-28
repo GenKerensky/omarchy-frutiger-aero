@@ -1,0 +1,40 @@
+# Frutiger Aero — Deep Reef
+# Looking down into the water rather than up at the sky: aquamarine and deep
+# teal, with coral / sunfish yellow / anemone pink carrying the ANSI accents.
+
+mode = "dark"
+
+accent = "#17e0c8"
+selection = "#0f4d5c"
+muted = "#4d7f8c"
+
+background = "#04222b"
+dark_background = "#021820"
+darker_background = "#010f15"
+lighter_background = "#0a3a47"
+
+foreground = "#dffaff"
+dark_foreground = "#5a94a3"
+light_foreground = "#c2ecf5"
+bright_foreground = "#f2feff"
+
+# Two-stop 45° active border — the gradient does the work Hyprland can't do
+# with gloss. Aquamarine into ocean blue.
+hyprland_active_border = "rgba(17e0c8ee) rgba(0aa3e8ee) 45deg"
+hyprland_inactive_border = "rgba(0a3a4799)"
+
+red = "#ff7a5c"
+yellow = "#ffc93c"
+orange = "#ff9d4d"
+green = "#5ee88f"
+cyan = "#3ff0dc"
+blue = "#4bb8ff"
+magenta = "#ff5fa2"
+brown = "#b08968"
+
+bright_red = "#ff9880"
+bright_yellow = "#ffd968"
+bright_green = "#7ff2a8"
+bright_cyan = "#6ff5e6"
+bright_blue = "#78cbff"
+bright_magenta = "#ff85bb"

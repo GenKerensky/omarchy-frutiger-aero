@@ -1,0 +1,136 @@
+# Frutiger Aero — Deep Reef shell surfaces.
+#
+# Thin glass everywhere the shell draws chrome. The Hyprland layer_rules in
+# ~/.config/hypr/hyprland.lua blur what sits behind these surfaces, so low
+# alpha here reads as frosted aquamarine rather than as a hole in the screen.
+
+[bar]
+background       = "#04222b"
+background-alpha = 0.55
+text             = "#dffaff"
+active            = "#ff7a5c"
+scale-with-font  = true
+
+[hyprland]
+# A theme-shipped shell.toml is used verbatim -- omarchy-theme-set-templates
+# skips any file the theme already provides -- so these are resolved values,
+# not template expressions.
+active-border            = "rgba(17e0c8ee) rgba(0aa3e8ee) 45deg"
+active-border-foreground = "rgba(17e0c8ee) rgba(0aa3e8ee) 45deg"
+
+[controls]
+# Control chrome picks up the accent rather than plain foreground, so hover
+# and selection read as lit glass instead of grey wash.
+normal-color        = "#dffaff"
+normal-fill-alpha   = 0.05
+normal-border       = "#17e0c8"
+normal-border-width = 1
+normal-border-alpha = 0.30
+
+hover-cursor-color        = "#dffaff"
+hover-cursor-fill-alpha   = 0.12
+hover-cursor-border       = "#17e0c8"
+hover-cursor-border-width = 1
+hover-cursor-border-alpha = 0.45
+
+focus-color        = "#dffaff"
+focus-fill-alpha   = 0.12
+focus-border       = "#17e0c8"
+focus-border-width = 1
+focus-border-alpha = 0.45
+
+selected-color        = "#dffaff"
+selected-fill-alpha   = 0.20
+selected-border       = "#17e0c8"
+selected-border-width = 0
+selected-border-alpha = 1.0
+
+pressed-fill-alpha   = 0.26
+selection-fill-alpha = 0.38
+
+[font]
+base-size = 14
+
+[popups]
+background       = "#04222b"
+background-alpha = 0.62
+text             = "#dffaff"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+
+[tooltip]
+background       = "#021820"
+background-alpha = 0.80
+text             = "#dffaff"
+border           = "hyprland.active-border-foreground"
+border-alpha     = 1.0
+
+[notifications]
+background       = "#04222b"
+background-alpha = 0.66
+text             = "#dffaff"
+border           = "hyprland.active-border"
+border-alpha     = 1.0
+countdown        = "#17e0c8"
+
+[launcher]
+background                = "#04222b"
+background-alpha          = 0.60
+text                      = "#dffaff"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 1.0
+scrim                     = "#010f15"
+scrim-alpha               = 0.45
+selected-background       = "#17e0c8"
+selected-background-alpha = 0.22
+selected-text             = "#6ff5e6"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.35
+
+[menu]
+background                = "#04222b"
+background-alpha          = 0.62
+text                      = "#dffaff"
+border                    = "hyprland.active-border-foreground"
+border-alpha              = 1.0
+scrim                     = "#010f15"
+scrim-alpha               = 0.45
+selected-background       = "#17e0c8"
+selected-background-alpha = 0.22
+selected-text             = "#6ff5e6"
+selected-border           = "hyprland.active-border-foreground"
+selected-border-alpha     = 0.35
+
+[polkit]
+background       = "#04222b"
+background-alpha = 0.66
+text             = "#dffaff"
+text-error       = "#ff7a5c"
+border           = "hyprland.active-border"
+border-error     = "#ff7a5c"
+border-alpha     = 1.0
+scrim            = "#010f15"
+scrim-alpha      = 0.55
+accent           = "#17e0c8"
+
+[lock]
+background       = "#04222b"
+background-alpha = 0.55
+text             = "#dffaff"
+placeholder      = "#94b1b7"
+text-error       = "#ff7a5c"
+border           = "hyprland.active-border"
+border-active    = "hyprland.active-border"
+border-error     = "#ff7a5c"
+border-alpha     = 1.0
+selection        = "#17e0c8"
+selection-alpha  = 0.45
+
+[image-picker]
+scrim                   = "#010f15"
+scrim-alpha             = 0.50
+text                    = "#dffaff"
+selected-border         = "#17e0c8"
+selected-border-alpha   = 1.0
+unselected-border       = "#dffaff"
+unselected-border-alpha = 0.28

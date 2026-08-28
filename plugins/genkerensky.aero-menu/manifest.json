@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "genkerensky.aero-menu",
+  "name": "Aero Menu Button",
+  "version": "1.0.0",
+  "author": "genkerensky",
+  "description": "Opens the Omarchy menu from a green gel button in the style of the Windows XP Media Center start button.",
+  "kinds": [
+    "bar-widget"
+  ],
+  "entryPoints": {
+    "barWidget": "BarWidget.qml"
+  },
+  "barWidget": {
+    "displayName": "Aero Menu Button",
+    "description": "Same action as the stock Omarchy menu button, drawn as an XP Media Center green gel.",
+    "category": "Compositor",
+    "allowMultiple": false,
+    "defaultSection": "left"
+  }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="Omarchy">
+  <title>Omarchy</title>
+  <!-- Glyph U+E900 extracted from /usr/share/fonts/omarchy/omarchy.ttf (fontTools).
+       TrueType fills by non-zero winding, which is also the SVG default, so the
+       counters in the mark stay open without an explicit fill-rule.
+       fill="currentColor" so it inherits colour the way the font glyph does. -->
+  <path fill="currentColor" fill-rule="nonzero" d="M70 954H549V1024H0V0H1024V1024H626V954H954V70H70ZM884 884H140V140H551V210H210V814H814V210H736V140H884ZM471 884H549V954H471ZM473 70H551V140H473ZM0 473H210V551H0Z"/>
+</svg>
