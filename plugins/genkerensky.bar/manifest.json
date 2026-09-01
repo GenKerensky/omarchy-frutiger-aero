@@ -1,17 +1,14 @@
 {
   "schemaVersion": 1,
   "id": "genkerensky.bar",
-  "name": "My Bar",
+  "name": "Frutiger Aero Bar",
   "version": "1.0.0",
-  "author": "Omarchy",
-  "description": "Status bar with widgets",
+  "author": "genkerensky",
+  "description": "Glossy Aero status bar: gradient glass strip with a specular cap, forked from the Omarchy bar",
   "kinds": [
     "bar"
   ],
   "entryPoints": {
     "bar": "Bar.qml"
-  },
-  "omarchy": {
-    "clonedFrom": "omarchy.bar"
   }
 }

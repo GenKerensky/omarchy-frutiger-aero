@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "id": "genkerensky.workspaces",
-  "name": "My Workspaces",
+  "name": "Aero Workspaces",
   "version": "1.0.0",
-  "author": "Omarchy",
-  "description": "Workspace number indicators",
+  "author": "genkerensky",
+  "description": "Workspaces as little 16:10 gel screens",
   "kinds": [
     "bar-widget"
   ],
@@ -12,12 +12,9 @@
     "barWidget": "Workspaces.qml"
   },
   "barWidget": {
-    "displayName": "My Workspaces",
-    "description": "Workspace number indicators",
+    "displayName": "Aero Workspaces",
+    "description": "Workspace number indicators drawn as 16:10 gel panels",
     "category": "Compositor",
     "allowMultiple": false
-  },
-  "omarchy": {
-    "clonedFrom": "omarchy.workspaces"
   }
 }

@@ -1,0 +1,23 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-json
+      - id: check-toml
+      - id: check-yaml
+
+  - repo: local
+    hooks:
+      - id: qmlformat
+        name: qmlformat (Qt 6)
+        entry: /usr/lib/qt6/bin/qmlformat -i
+        language: system
+        files: \.qml$
+
+      - id: qmllint
+        name: qmllint (Qt 6)
+        entry: /usr/lib/qt6/bin/qmllint -I tools/qml-imports
+        language: system
+        files: \.qml$
