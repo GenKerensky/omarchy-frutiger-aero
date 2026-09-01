@@ -1,0 +1,12 @@
+# Wallpaper source art lives in src/ and is ~110 MB. `omarchy theme install`
+# installs a theme with a plain `git clone`, so without this every user would
+# pull all of it down just to get a 26 MB backgrounds/ directory.
+#
+# Excluded paths still clone -- as small pointer files, not the real bytes.
+# Anyone who wants to edit the wallpapers fetches them on demand. The empty
+# --exclude is required: --include overrides lfs.fetchinclude, not
+# lfs.fetchexclude, so without it the line below silently does nothing.
+#
+#   git lfs pull --exclude="" --include="src/**"
+[lfs]
+	fetchexclude = /src/**
